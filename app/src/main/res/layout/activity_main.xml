@@ -2,7 +2,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:focusableInTouchMode="true"
     tools:context=".view.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,9 +21,7 @@
             <SearchView
                 android:id="@+id/searchView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:focusable="false"
-                android:iconifiedByDefault="false"/>
+                android:layout_height="wrap_content"/>
 
         </android.support.v7.widget.Toolbar>
 
