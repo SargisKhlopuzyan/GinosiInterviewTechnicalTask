@@ -5,11 +5,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Url;
 
 public interface APIService {
-
-    @GET Call<DeveloperResponse> getDataSearchedByPage(@Url String url);
-
-    @GET Call<DeveloperResponse> getDataSearchedByDate(@Url String url);
-
-    @GET Call<DeveloperResponse> getDataSearchedByPhrase(@Url String url);
-
+    @GET Call<DataResponse> getDataSearchedByPage(@Url String url);
+    @GET Call<DataResponse> getDataSearchedByPhrase(@Url String url);
 }

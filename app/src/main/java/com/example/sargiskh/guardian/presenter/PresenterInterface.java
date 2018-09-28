@@ -1,9 +1,6 @@
 package com.example.sargiskh.guardian.presenter;
 
 public interface PresenterInterface {
-
-    void getDataByPage(int pageNumber);
-    void getDataSearchedByDate(String fromDate, String toDate);
+    void getDataSearchedByPage(int pageNumber);
     void getDataSearchedByPhrase(String stringToSearch);
-
 }

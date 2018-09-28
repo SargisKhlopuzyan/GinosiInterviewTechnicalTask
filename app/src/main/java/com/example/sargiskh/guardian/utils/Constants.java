@@ -6,6 +6,5 @@ public interface Constants {
 
     String DATE_TIME_TIME_ZONE_FORMATTER = "yyyy-MM-dd'T'HH:mm:ss'Z'";
     String DATE_TIME_FORMATTER = "d MMMM yyyy HH:mm";
-    String DATE_FORMATTER = "yyyy-MM-dd";
 
 }

@@ -28,10 +28,12 @@ import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataAdapterViewHolder> {
 
+    private OnBottomReachedListener onBottomReachedListener;
     private List<Results> results;
     private Context context;
 
-    public DataAdapter() {
+    public DataAdapter(OnBottomReachedListener onBottomReachedListener) {
+        this.onBottomReachedListener = onBottomReachedListener;
         this.results = Collections.emptyList();
     }
 
@@ -46,6 +48,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataAdapterVie
     @Override
     public void onBindViewHolder(@NonNull DataAdapterViewHolder holder, int position) {
         holder.bindPeople(results.get(position));
+        if (position == results.size() - 3){
+            onBottomReachedListener.onBottomReached(position);
+        }
     }
 
     @Override
@@ -93,6 +98,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataAdapterVie
             });
         }
 
+        // Datetime formatter
+        // Out date format more user friendly
         private String formatDateTime(String input) {
             SimpleDateFormat sdfIn = new SimpleDateFormat(Constants.DATE_TIME_TIME_ZONE_FORMATTER);
             sdfIn.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -105,6 +112,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataAdapterVie
             return sdfOut.format(dateIn);
         }
 
+        // NOTE
+        // In free version it is not possible to get articles' image, that is why I just added local images to decorate the list
         private int getCoverImageResourceIdByPillarName(String pillarName) {
 
             if (pillarName != null)

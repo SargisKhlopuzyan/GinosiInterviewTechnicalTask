@@ -6,7 +6,6 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Response implements Serializable {
-
     @SerializedName("status") public String status;
 
     @SerializedName("userTier") public String userTier;
@@ -23,13 +22,5 @@ public class Response implements Serializable {
 
     @SerializedName("orderBy") public String orderBy;
 
-//    @SerializedName("results") public Results results;
     @SerializedName("results") public List<Results> results;
-
-//    public String fullName;
-
-//    public boolean hasEmail() {
-//        return mail != null && !mail.isEmpty();
-//    }
-
 }

@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
 public class Results implements Serializable {
-
     @SerializedName("id") public String id;
 
     @SerializedName("type") public String type;
