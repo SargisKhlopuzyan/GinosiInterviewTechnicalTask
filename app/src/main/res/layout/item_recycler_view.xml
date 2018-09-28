@@ -1,0 +1,60 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:id="@+id/item_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_large">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <TextView
+            android:id="@+id/textViewPillarName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_toEndOf="@+id/imageView"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Arts"/>
+
+        <TextView
+            android:id="@+id/textViewWebTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textViewPillarName"
+            android:layout_below="@+id/textViewPillarName"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="14sp"
+            tools:text="How Hokusai's Great Wave crashed into Van Gogh's Starry Night"/>
+
+        <TextView
+            android:id="@+id/textViewWebPublicationDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textViewWebTitle"
+            android:layout_below="@+id/textViewWebTitle"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="14sp"
+            tools:text="2018-09-28T06:00:49Z"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
