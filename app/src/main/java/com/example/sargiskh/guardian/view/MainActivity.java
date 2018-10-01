@@ -95,6 +95,13 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
     }
 
 
+    @Override
+    protected void onDestroy() {
+        LiveData<DataResponse> liveData = DataController.getInstance().getData();
+        liveData.removeObservers(this);
+        super.onDestroy();
+    }
+
     private void findViews() {
         searchView = findViewById(R.id.searchView);
         textViewStatus = findViewById(R.id.textViewStatus);
